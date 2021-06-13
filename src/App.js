@@ -4,6 +4,8 @@ import './App.css';
 import { withAuthenticator } from 'aws-amplify-react'
 import Amplify, { Auth } from 'aws-amplify';
 import aws_exports from './aws-exports';
+//import MmoGetter from './mmogetters.js';
+import GetCategories from './GetCategories';
 Amplify.configure(aws_exports);
 
 class App extends Component {
@@ -24,6 +26,10 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <GetCategories />
+        <div id="queryHeader">
+          <div id="appscreen"></div>
+        </div>
       </div>
     );
   }
