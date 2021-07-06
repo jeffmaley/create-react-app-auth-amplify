@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { withAuthenticator } from 'aws-amplify-react'
@@ -26,9 +26,10 @@ class App extends Component {
             Learn React
           </a>
         </header>
-        <GetCategories />
         <div id="queryHeader">
-          <div id="appscreen"></div>
+          <div id="appscreen">
+            <GetCategories queryString="categories+all" apiUrl="https://ppn3v9rcdg.execute-api.us-east-1.amazonaws.com/Stage/GetMmorpg/" />
+          </div>
         </div>
       </div>
     );
